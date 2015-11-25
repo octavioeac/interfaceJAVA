@@ -1,0 +1,17 @@
+www\frida\com\consulta\Centrales.class
+www\frida\com\consulta\ObjetoSaidRequest.class
+www\frida\com\consulta\ObjectSc.class
+www\frida\com\consultaTelefono\ObjetoSaidTelefonoResponse.class
+www\frida\modelo\SaibConsultaRequest.class
+www\frida\modelo\StoreProcedureSAIB.class
+www\frida\modelo\Snippet.class
+www\frida\prueba\pruebaInsert.class
+www\frida\com\consultaTelefono\ConsulTelResponse.class
+www\frida\com\consulta\SolicitudPCAI.class
+www\frida\com\consulta\Regiones.class
+www\frida\com\consulta\Errores.class
+www\frida\com\endpoint\endpoitSaidService.class
+www\frida\com\consultaTelefono\ObjetoSaidTelefonoRequest.class
+www\frida\com\consultaTelefono\ConsulTelRequest.class
+www\frida\com\consulta\ObjetoSaidResponse.class
+www\frida\modelo\HibernateUtil.class

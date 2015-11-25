@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/11/2015 10:16:41 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="www.frida.modelo.StoreProcedureSAIB" table="STOREPROCEDURESAIB">
+        <id name="ncaiId" type="java.lang.String">
+            <column name="ncai_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="folioSc" type="java.lang.String">
+            <column name="folio_sc" />
+        </property>
+        <property name="tipoConcentracion" type="java.lang.String">
+            <column name="tipo_concentracion" />
+        </property>
+        <property name="claveOperador" type="java.lang.String">
+            <column name="clave_operador" />
+        </property>
+        <property name="idRegion" type="java.lang.String">
+            <column name="id_region" />
+        </property>
+        <property name="pc1Siglas" type="java.lang.String">
+            <column name="pc1_siglas" />
+        </property>
+        <property name="pc1Central" type="java.lang.String">
+            <column name="pc1_central" />
+        </property>
+        <property name="pc2Siglas" type="java.lang.String">
+            <column name="pc2_siglas" />
+        </property>
+        <property name="pc2Central" type="java.lang.String">
+            <column name="pc2_central" />
+        </property>
+        <property name="ncaiSiglas" type="java.lang.String">
+            <column name="ncai_siglas" />
+        </property>
+        <property name="ncaiCentral" type="java.lang.String">
+            <column name="ncai_central" />
+        </property>
+        
+    </class>
+</hibernate-mapping>
