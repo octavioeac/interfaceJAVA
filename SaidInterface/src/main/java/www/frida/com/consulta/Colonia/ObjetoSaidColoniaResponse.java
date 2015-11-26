@@ -8,20 +8,22 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="objetoSaidColoniaResponse" ,namespace="http://www.frida.com/Said")
-@XmlType(name="",propOrder={"consulCol"})
+@XmlType(name="",propOrder={"consulContratacion"})
 public class ObjetoSaidColoniaResponse {
 
 	
 	@XmlElement(required=true)
-	protected ConsultaColonia consulCol;
+	protected ConsultaColonia consulContratacion;
 
-	public ConsultaColonia getConsulCol() {
-		return consulCol;
+	public ConsultaColonia getConsulContratacion() {
+		return consulContratacion;
 	}
 
-	public void setConsulCol(ConsultaColonia consulCol) {
-		this.consulCol = consulCol;
+	public void setConsulContratacion(ConsultaColonia consulContratacion) {
+		this.consulContratacion = consulContratacion;
 	}
+
+	
 	
 	
 
