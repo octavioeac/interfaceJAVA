@@ -13,8 +13,8 @@ public class prueba {
 	public static void main(String[] args) {
 		
 		SolicitudPCAI objeto=new SolicitudPCAI();
-		objeto.setMovimiento("CONSULTA");
-		objeto.setTipoConcentracion("LOCALO");
+		objeto.setMovimiento("CONSULTAS");
+		objeto.setTipoConcentracion("LOCAL");
 		objeto.setTipoContrato("COLONIA");
 		ConsulTelRequest gs=new ConsulTelRequest();	
 		
