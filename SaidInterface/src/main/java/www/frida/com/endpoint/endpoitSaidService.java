@@ -217,6 +217,7 @@ public class endpoitSaidService {
 	@ResponsePayload
 	public ObjetoSaidColoniaResponse getConsultaContratacion(@RequestPayload  ObjetoSaidColoniaRequest request){
 		
+		
 		pruebaContratacionConsulta k=new pruebaContratacionConsulta();
 		
 		ObjetoSaidColoniaResponse reponse=new ObjetoSaidColoniaResponse();

@@ -79,5 +79,110 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
     </xs:sequence>
   </xs:complexType>
 
+
+<!-- //////////////////////////////////////////////////////////////////////OPERACION -->
+
+
+
+
+  <xs:element name="objetoSaidColoniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="consulContratacion" type="Q1:consultaColonia"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+    <xs:complexType name="consultaColonia">
+    <xs:sequence>
+      <xs:element name="folioSC" type="xs:string"/>
+      <xs:element name="tipoContrato" type="xs:string"/>
+      <xs:element name="tipoConcentracion" type="xs:string"/>
+      <xs:element name="claveOperador" type="xs:string"/>
+      <xs:element name="region" type="Q1:Region" maxOccurs="unbounded"/>
+      <xs:element name="error" type="Q1:errores"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Region">
+    <xs:sequence>
+      <xs:element name="idRegion" type="xs:string"/>
+      <xs:element name="pc1Siglas" type="xs:string"/>
+      <xs:element name="pc1Central" type="xs:string"/>
+      <xs:element name="pc2Siglas" type="xs:string"/>
+      <xs:element name="pc2Central" type="xs:string"/>
+      <xs:element name="puertos1G" type="Q1:puertos1G" maxOccurs="unbounded"/>
+      <xs:element name="puertos10G" type="Q1:puertos10G" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="puertos1G">
+    <xs:sequence>
+      <xs:element name="pcai" type="Q1:pcai" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pcai">
+    <xs:sequence>
+      <xs:element name="folioPcai" type="xs:string"/>
+      <xs:element name="ncai" type="Q1:ncai" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ncai">
+    <xs:sequence>
+      <xs:element name="folioNcai" type="xs:string"/>
+      <xs:element name="ncaId" type="xs:string"/>
+      <xs:element name="ncaiSiglas" type="xs:string"/>
+      <xs:element name="ncaiCentral" type="xs:string"/>
+      <xs:element name="equipoAcceso" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="puertos10G">
+    <xs:sequence>
+      <xs:element name="pcai" type="Q1:pcai" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  
+  
+  
+  
+    <xs:element name="objetoSaidColoniaRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="consulContrata" type="Q1:solicitudColonia"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+    <xs:complexType name="solicitudColonia">
+    <xs:sequence>
+      <xs:element name="tipoContrato" type="xs:string"/>
+      <xs:element name="tipoConcentracion" type="xs:string"/>
+      <xs:element name="movimiento" type="xs:string"/>
+      <xs:element name="folioSC" type="xs:string"/>
+      <xs:element name="siglas" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="siglaCentral" type="xs:string" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="claveOperador" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+
+
+
+
+
+
+
+
+
 </xs:schema>
 

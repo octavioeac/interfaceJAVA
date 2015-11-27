@@ -21,8 +21,7 @@
           <property name="xsds">  
             <list>  
                <value>schemas/operacionesSchema.xsd</value>
-                  <value>schemas/OperacionConsultaContrata.xsd</value>
-               </list>  
+             </list>  
           </property>  
         </bean>  
       </property>  
