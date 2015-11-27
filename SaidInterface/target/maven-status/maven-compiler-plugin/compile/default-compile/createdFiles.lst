@@ -1,5 +1,6 @@
 www\frida\com\consulta\Colonia\SolicitudContratacionConsulta.class
 www\frida\com\consulta\Colonia\Puertos10G.class
+www\frida\com\consulta\Colonia\ObjetoSaidConsultaContratacionColoniaResponse.class
 www\frida\com\consultaTelefono\ObjetoSaidTelefonoResponse.class
 www\frida\modelo\StoreProcedureSAIB.class
 www\frida\prueba\pruebaInsert.class
@@ -7,7 +8,6 @@ www\frida\com\consultaTelefono\ConsulTelResponse.class
 www\frida\com\consulta\SolicitudPCAI.class
 www\frida\com\consulta\Regiones.class
 www\frida\com\in\dep\prueba.class
-www\frida\com\consulta\Colonia\ObjetoSaidColoniaResponse.class
 www\frida\modelo\HibernateUtil.class
 www\frida\prueba\pruebaContratacionConsulta.class
 www\frida\com\consulta\Centrales.class
@@ -19,14 +19,15 @@ www\frida\modelo\SaibConsultaRequest.class
 www\frida\modelo\Snippet.class
 www\frida\com\consulta\Colonia\Pcai.class
 www\frida\com\consulta\Colonia\Puertos1G.class
-www\frida\com\consulta\Colonia\ObjetoSaidColoniaRequest.class
 www\frida\com\in\dep\IssueMensageTeleImple.class
 www\frida\com\consulta\Errores.class
+www\frida\com\consulta\DAO\insertaConsultaDAO.class
 www\frida\com\in\dep\IssueMessage.class
 www\frida\com\in\dep\IssueMensageConsultaImple.class
 www\frida\com\endpoint\endpoitSaidService.class
 www\frida\com\consultaTelefono\ObjetoSaidTelefonoRequest.class
 www\frida\com\in\dep\objectFactoryDependecy.class
 www\frida\com\consultaTelefono\ConsulTelRequest.class
+www\frida\com\consulta\Colonia\ObjetoSaidConsultaContratacionColoniaRequest.class
 www\frida\com\consulta\ObjetoSaidResponse.class
 www\frida\com\consulta\Colonia\Region.class

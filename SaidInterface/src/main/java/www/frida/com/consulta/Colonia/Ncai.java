@@ -11,7 +11,8 @@ import javax.xml.bind.annotation.XmlType;
 		"ncaId",
 		"ncaiSiglas",
 		"ncaiCentral",
-		"equipoAcceso"
+		"equipoAcceso",
+		"codigoConfirmacion"
 		
 		})
 public class Ncai {
@@ -70,7 +71,19 @@ public class Ncai {
 	public void setEquipoAcceso(String equipoAcceso) {
 		this.equipoAcceso = equipoAcceso;
 	}
-	
+
+	public String getCodigoConfirmacion() {
+		return codigoConfirmacion;
+	}
+
+	public void setCodigoConfirmacion(String codigoConfirmacion) {
+		this.codigoConfirmacion = codigoConfirmacion;
+	}
+
+	@XmlElement(required=true)
+	protected String codigoConfirmacion;
+
+		
 	
 }
 

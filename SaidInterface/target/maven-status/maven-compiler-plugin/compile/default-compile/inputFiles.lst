@@ -1,5 +1,4 @@
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\in\dep\IssueMensageTeleImple.java
-C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Colonia\ObjetoSaidColoniaResponse.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\SolicitudPCAI.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Colonia\Puertos1G.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Colonia\Pcai.java
@@ -16,8 +15,10 @@ C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\in\de
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Colonia\ConsultaColonia.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\prueba\pruebaContratacionConsulta.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Errores.java
+C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Colonia\ObjetoSaidConsultaContratacionColoniaRequest.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Regiones.java
-C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Colonia\ObjetoSaidColoniaRequest.java
+C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\DAO\insertaConsultaDAO.java
+C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Colonia\ObjetoSaidConsultaContratacionColoniaResponse.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\prueba\pruebaInsert.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\modelo\Snippet.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\ObjectSc.java
@@ -25,8 +26,8 @@ C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\endpo
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consultaTelefono\ConsulTelResponse.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Colonia\SolicitudContratacionConsulta.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\modelo\SaibConsultaRequest.java
-C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\in\dep\IssueMensageConsultaImple.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\ObjetoSaidRequest.java
-C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consultaTelefono\ObjetoSaidTelefonoRequest.java
+C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\in\dep\IssueMensageConsultaImple.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Colonia\Region.java
+C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consultaTelefono\ObjetoSaidTelefonoRequest.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Centrales.java

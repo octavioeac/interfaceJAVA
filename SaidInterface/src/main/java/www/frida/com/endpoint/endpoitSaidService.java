@@ -15,15 +15,12 @@ import www.frida.com.consulta.ObjetoSaidRequest;
 import www.frida.com.consulta.ObjetoSaidResponse;
 import www.frida.com.consulta.Regiones;
 import www.frida.com.consulta.SolicitudPCAI;
-import www.frida.com.consulta.Colonia.ObjetoSaidColoniaRequest;
-import www.frida.com.consulta.Colonia.ObjetoSaidColoniaResponse;
-import www.frida.com.consultaTelefono.ConsulTelRequest;
-import www.frida.com.consultaTelefono.ConsulTelResponse;
-import www.frida.com.consultaTelefono.ObjetoSaidTelefonoRequest;
-import www.frida.com.consultaTelefono.ObjetoSaidTelefonoResponse;
+import www.frida.com.consulta.Colonia.ObjetoSaidConsultaContratacionColoniaRequest;
+import www.frida.com.consulta.Colonia.ObjetoSaidConsultaContratacionColoniaResponse;
 import www.frida.modelo.Snippet;
 import www.frida.prueba.pruebaContratacionConsulta;
 import www.frida.prueba.pruebaInsert;
+
 
 
 @Endpoint
@@ -213,14 +210,14 @@ public class endpoitSaidService {
 	*/
 
 	
-	@PayloadRoot(localPart = "objetoSaidColoniaRequest", namespace="http://www.frida.com/Said")
+	@PayloadRoot(localPart = "objetoSaidConsultaContratacionColoniaRequest", namespace="http://www.frida.com/Said")
 	@ResponsePayload
-	public ObjetoSaidColoniaResponse getConsultaContratacion(@RequestPayload  ObjetoSaidColoniaRequest request){
+	public ObjetoSaidConsultaContratacionColoniaResponse getConsultaContratacion(@RequestPayload  ObjetoSaidConsultaContratacionColoniaRequest request){
 		
-		
+		System.out.println("HOLA METODO CONSULTA");
 		pruebaContratacionConsulta k=new pruebaContratacionConsulta();
 		
-		ObjetoSaidColoniaResponse reponse=new ObjetoSaidColoniaResponse();
+		ObjetoSaidConsultaContratacionColoniaResponse reponse=new ObjetoSaidConsultaContratacionColoniaResponse();
 		reponse.setConsulContratacion(k.getConsulta());
 		return reponse;
 		

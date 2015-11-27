@@ -157,7 +157,7 @@ public class pruebaContratacionConsulta {
 		obj3.setPc1Siglas("pc1Siglas 3");
 		obj3.setPc2Central("pc2Central 3");
 		obj3.setPc2Siglas("pc2Siglas  3");
-		obj3.setPuertos10G(lista.getpuerto10());
+		obj3.setPuertos10G(lista.getpuerto102());
 		obj3.setPuertos1G(lista.getpuerto1());
 		
 		List<Region> k=new ArrayList<Region>();
@@ -168,6 +168,21 @@ public class pruebaContratacionConsulta {
 	
 }
 
+	
+	public List<Puertos10G> getpuerto102(){
+		pruebaContratacionConsulta lista=new pruebaContratacionConsulta();
+		Puertos10G ob1=new Puertos10G();
+		ob1.setPcai(null);
+		
+		
+		List<Puertos10G> k=new ArrayList<Puertos10G>();
+		k.add(ob1);
+		
+		return k;
+		
+		
+	}
+	
 	
 	
 }

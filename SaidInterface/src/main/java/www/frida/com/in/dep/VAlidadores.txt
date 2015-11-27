@@ -62,4 +62,27 @@ if(obj.getTipoContrato().isEmpty()){
 			}
 			
 		}
+		
+		///////////////////////////////////////////////////////////////
 
+if(obj.getClaveOperador().isEmpty()){
+				k.setCodigoError("901");
+				k.setDescripError("El tag <claveOperador> esta vacio");
+				ok=k;
+			
+			}
+			else{
+				if(obj.getClaveOperador().length()<=4){
+					k.setCodigoError("");
+					k.setDescripError("");
+					ok=k;
+				
+				}
+				else{
+					k.setCodigoError("910");
+					k.setDescripError("El tag <claveOperador> acepta 4 caracteres maximo");
+					ok=k;
+				}
+				
+			}
+		

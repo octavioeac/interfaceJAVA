@@ -80,12 +80,8 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
   </xs:complexType>
 
 
-<!-- //////////////////////////////////////////////////////////////////////OPERACION -->
-
-
-
-
-  <xs:element name="objetoSaidColoniaResponse">
+<!-- //////////////////////////////////////////////////////////////////////OPERACION CONSULTA CONTRATACION-->
+  <xs:element name="objetoSaidConsultaContratacionColoniaResponse">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="consulContratacion" type="Q1:consultaColonia"/>
@@ -136,6 +132,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="ncaiSiglas" type="xs:string"/>
       <xs:element name="ncaiCentral" type="xs:string"/>
       <xs:element name="equipoAcceso" type="xs:string"/>
+      <xs:element name="codigoConfirmacion" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -144,12 +141,10 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="pcai" type="Q1:pcai" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
+
   
-  
-  
-  
-  
-    <xs:element name="objetoSaidColoniaRequest">
+
+  <xs:element name="objetoSaidConsultaContratacionColoniaRequest">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="consulContrata" type="Q1:solicitudColonia"/>
@@ -157,7 +152,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
     </xs:complexType>
   </xs:element>
   
-    <xs:complexType name="solicitudColonia">
+   <xs:complexType name="solicitudColonia">
     <xs:sequence>
       <xs:element name="tipoContrato" type="xs:string"/>
       <xs:element name="tipoConcentracion" type="xs:string"/>
@@ -175,9 +170,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
   </xs:complexType>
 
 
-
-
-
+<!-- //////////////////////////////////////////////////////////////////////OPERACION CONSULTA CONTRATACION-->
 
 
 

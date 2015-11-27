@@ -1,8 +1,13 @@
 package www.frida.com.in.dep;
 
 
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.List;
+
 import www.frida.com.consulta.Errores;
 import www.frida.com.consulta.SolicitudPCAI;
+import www.frida.com.consulta.DAO.insertaConsultaDAO;
 import www.frida.com.consultaTelefono.ConsulTelRequest;
 
 public class IssueMensageConsultaImple implements IssueMessage {
@@ -50,10 +55,44 @@ public class IssueMensageConsultaImple implements IssueMessage {
 							k.setCodigoError("");
 							k.setDescripError("");
 							ok=k;
-							//////////////////////////////////////////////////////////////
-							////////////////////////////////////////////////////////////
-							////////////////////////
-						
+							if(obj.getFolioSC().isEmpty()){
+								k.setCodigoError("501");
+								k.setDescripError("El tag <tipoConcentracion> esta vacio");
+								ok=k;
+							
+							}
+							else{
+								
+								
+								if(obj.getClaveOperador().isEmpty()){
+									k.setCodigoError("901");
+									k.setDescripError("El tag <claveOperador> esta vacio");
+									ok=k;
+								
+								}
+								else{
+									if(obj.getClaveOperador().length()<=4){
+							
+										//////////////////////////////////////////////////////////////
+										////////////////////////////////////////////////////////////
+										////////////////////////
+									
+										k.setCodigoError("");
+										k.setDescripError("");
+										ok=k;
+									
+									}
+									else{
+										k.setCodigoError("910");
+										k.setDescripError("El tag <claveOperador> acepta 4 caracteres maximo");
+										ok=k;
+									}
+									
+								}
+															
+
+								
+							}
 						}
 						else{
 							k.setCodigoError("101");
@@ -71,17 +110,136 @@ public class IssueMensageConsultaImple implements IssueMessage {
 				
 			}
 
-
 			
 			
 			
 			
 		}
 				
+	
+
+		
 		
 	return ok;
 	}
 
+	
+	
+	public Errores validaSiglas(String sigla){
+		Errores k=new Errores();
+		if(sigla.isEmpty()){
+			k.setCodigoError("401");
+			k.setDescripError("El tag <siglaCentral> esta vacio");
+			ok=k;
+		
+		}
+		else{
+			if(sigla.length()<=3){
+				k.setCodigoError("");
+				k.setDescripError("");
+				ok=k;
+			
+			}
+			else{
+				k.setCodigoError("405");
+				k.setDescripError("El tag <siglaCentral> con valor '"+sigla+"' acepta 3 caracteres maximo");
+				ok=k;
+			}
+		
+	}
+		return ok;
+	
+	}
+	
+	public Hashtable<Boolean, Errores> analizaTotalSiglas(List<String> lista){
+		Hashtable<Boolean, Errores> source = new Hashtable<Boolean,Errores>();
+		insertaConsultaDAO daoObjeto= new insertaConsultaDAO();		
+		int[] array =new int[lista.size()];
+		int i=0;
+		Errores k=new Errores();
+		for(String h :lista){
+			Errores eo=validaSiglas(h);
+			   if(eo.getCodigoError().isEmpty()){
+				   System.out.println(obj.getClaveOperador());	          			   
+				   System.out.println(obj.getFolioSC());
+				   System.out.println(obj.getMovimiento());
+				   System.out.println(obj.getTipoConcentracion());
+				   System.out.println(obj.getTipoContrato());
+				   System.out.println(eo.getDescripError());
+				   System.out.println(h);
+				   System.out.println("SIGLA BUENA");
+				   daoObjeto.insertaConsulta(
+						   obj.getTipoContrato(), 
+						   obj.getTipoConcentracion(),
+						   obj.getMovimiento(),
+						   obj.getFolioSC(),
+						   obj.getClaveOperador(), 
+						   h,"", "");		   
+				   
+				   source.put(true, eo);
+				   			   }
+			   else{
+				   
+				   System.out.println(obj.getClaveOperador());	          			   
+				   System.out.println(obj.getFolioSC());
+				   System.out.println(obj.getMovimiento());
+				   System.out.println(obj.getTipoConcentracion());
+				   System.out.println(obj.getTipoContrato());
+			      System.out.println(h);
+				   System.out.println(eo.getDescripError());
+				   System.out.println("SIGLA MALA");
+				   daoObjeto.insertaConsulta(
+						   obj.getTipoContrato(), 
+						   obj.getTipoConcentracion(),
+						   obj.getMovimiento(),
+						   obj.getFolioSC(),
+						   obj.getClaveOperador(), 
+						   h,eo.getCodigoError() , 
+						   eo.getDescripError());		   
+				   
+				   
+				   source.put(false, eo);
+			   }
+			   i++;
+			   System.out.println(i);
+		}
+		return source;
+		
+	}
+        	
+	public void regresaError(Errores isu){
+		System.out.println(obj.getClaveOperador());
+		System.out.println("HOLA METODO");
+		List<String> lista =new ArrayList<String>();
+		System.out.println(isu.getCodigoError());
+		System.out.println(isu.getDescripError());
+		System.out.println(obj.getSiglaCentral().size());
+		insertaConsultaDAO daoObjeto= new insertaConsultaDAO();		
+			Errores k=new Errores();
+		for(String h :obj.getSiglaCentral()){
+			Errores eo=validaSiglas(h);
+			   			   System.out.println(obj.getClaveOperador());	          			   
+				   System.out.println(obj.getFolioSC());
+				   System.out.println(obj.getMovimiento());
+				   System.out.println(obj.getTipoConcentracion());
+				   System.out.println(obj.getTipoContrato());
+			      System.out.println(h);
+				   System.out.println(eo.getDescripError());
+				   System.out.println("SIGLA MALA");
+				   daoObjeto.insertaConsulta(
+						   obj.getTipoContrato(), 
+						   obj.getTipoConcentracion(),
+						   obj.getMovimiento(),
+						   obj.getFolioSC(),
+						   obj.getClaveOperador(), 
+						   h,isu.getCodigoError() , 
+						   isu.getDescripError());		   
+					   
+		}
+
+		
+	}
+	
 	
 
 }
