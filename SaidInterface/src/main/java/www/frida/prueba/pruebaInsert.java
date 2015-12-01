@@ -1,7 +1,10 @@
 package www.frida.prueba;
 
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import www.frida.modelo.HibernateUtil;
 import www.frida.modelo.SaibConsultaRequest;
@@ -14,47 +17,42 @@ public class pruebaInsert {
 		System.out.println(datesql);
 		
 		
-		
-		Session session=HibernateUtil.getSessionFactory().getCurrentSession();
-		session.beginTransaction();
-		
-	   
+       try{
        
-		//Query query = session.getNamedQuery("SP_pruebaJava");
-		
-//		Query query = session.createSQLQuery("CALL prueba_java_procedure(?,?,?,?,?,?)").addEntity(StoreProcedureSAIB.class);
-//    
-//		System.out.println(query.getQueryString());
-//		
-//		StoreProcedureSAIB ejemplo=(StoreProcedureSAIB) query.uniqueResult();
-//   System.out.println(ejemplo.getFolioSc());
-//   System.out.println(ejemplo.getIdRegion());
-//   System.out.println(ejemplo.getNcaiCentral());
-		
-		SaibConsultaRequest scr = new SaibConsultaRequest();
-		scr.setTipoConcentracion(concentracion);
-		scr.setTipoContrato(tipoContrato);
-		scr.setMovimiento("jkjkj");
-		scr.setFolioSC(folioSC);
-		scr.setClaveOperador(claveOperador);
-		scr.setSiglasCentral("PQR");
-		scr.setError("error");
-		scr.setErrorMensaje("fallo");
-		scr.setFechaRequest(datesql);
-		session.save(scr);
-       System.out.println("SALVADO");
-       session.getTransaction().commit();
-   
-   
+
+  		 SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+  		 Session newSession = sessionFactory.openSession();
+  		 newSession.beginTransaction();   
+   		SaibConsultaRequest scr = new SaibConsultaRequest();
+   		scr.setTipoConcentracion(concentracion);
+   		scr.setTipoContrato(tipoContrato);
+   		scr.setMovimiento("jkjkj");
+   		scr.setFolioSC(folioSC);
+   		scr.setClaveOperador(claveOperador);
+   		scr.setSiglasCentral("PQR");
+   		scr.setError("error");
+   		scr.setErrorMensaje("fallo");
+   		scr.setFechaRequest(datesql);
+   		newSession.save(scr);
+          System.out.println("SALVADO");
+          newSession.getTransaction().commit();    	 
+    	   newSession.close();
+    	  
+             
+       
+       }
+       catch(HibernateException e){
+    	   System.out.println(e);
+       }
 		
 		
 	}
 	
 
-	/*public static void main(String[] args) {
+	public static void main(String[] args) {
 		pruebaInsert obj=new pruebaInsert();
 		obj.inserta("abc", "sdkjskdj", "skkdjskdj", "mno");
 
-	}*/
+	}
 
 }

@@ -98,9 +98,12 @@
         </dependency>
   
 			<!-- HIBERNATE -->
-		
-		
-	  </dependencies>
+
+
+			
+			
+  </dependencies>
+	  
 	  
 	  <!--  -->
 	  

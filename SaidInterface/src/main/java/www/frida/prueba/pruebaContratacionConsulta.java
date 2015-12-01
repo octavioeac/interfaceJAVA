@@ -19,7 +19,7 @@ public class pruebaContratacionConsulta {
 		ConsultaColonia obj1=new ConsultaColonia();
 		obj1.setClaveOperador("CLAVE OPERADOR");
 		Errores error=new Errores();
-		error.setCodigoError("");
+		error.setCodigoError("310");
 		error.setDescripError("EXITO");
 		obj1.setError(error);
 		obj1.setFolioSC("FOLIO SC");
@@ -75,10 +75,7 @@ public class pruebaContratacionConsulta {
 		
 		Ncai objeto4=new  Ncai();
 		objeto4.setFolioNcai("FOLIO 4");
-		objeto4.setNcaiCentral("CENTRAL 4");
-		objeto4.setNcaiSiglas("SIGLA 4 ");
-		objeto4.setEquipoAcceso("EQUIPO ACCESO 4");
-		
+		objeto4.setCodigoConfirmacion("808");
 		
 		List<Ncai> k=new ArrayList<Ncai>();
 		k.add(objeto1);

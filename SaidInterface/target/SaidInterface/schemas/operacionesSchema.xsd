@@ -118,10 +118,13 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="pcai">
+     <xs:complexType name="pcai">
     <xs:sequence>
       <xs:element name="folioPcai" type="xs:string"/>
       <xs:element name="ncai" type="Q1:ncai" maxOccurs="unbounded"/>
+      <xs:element name="codigoConfirmacion" type="xs:string" minOccurs="0"/>
+      <xs:element name="anchoBanda" type="xs:string" minOccurs="0"/>
+      <xs:element name="estatus" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
 
@@ -133,15 +136,16 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="ncaiCentral" type="xs:string"/>
       <xs:element name="equipoAcceso" type="xs:string"/>
       <xs:element name="codigoConfirmacion" type="xs:string"/>
+      <xs:element name="estatus" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
-
+  
+  
   <xs:complexType name="puertos10G">
     <xs:sequence>
       <xs:element name="pcai" type="Q1:pcai" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-
   
 
   <xs:element name="objetoSaidConsultaContratacionColoniaRequest">
@@ -168,9 +172,77 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="claveOperador" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
-
+  
 
 <!-- //////////////////////////////////////////////////////////////////////OPERACION CONSULTA CONTRATACION-->
+
+
+<!-- //////////////////////////////////////////////////////////////////////////OPERACION CONSULTA COLONIA -->
+    
+  
+  
+  <!-- REQUEST -->
+  
+  
+  <xs:element name="objetoContratacionConsultaRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="peticionContratacionConsulta" type="Q1:peticionContratacionConsulta"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  
+    <xs:complexType name="peticionContratacionConsulta">
+    <xs:sequence>
+      <xs:element name="tipoContrato" type="xs:string"/>
+      <xs:element name="tipoConcentracion" type="xs:string"/>
+      <xs:element name="movimiento" type="xs:string"/>
+      <xs:element name="folioSC" type="xs:string"/>
+      <xs:element name="claveOperador" type="xs:string"/>
+      <xs:element name="nis" type="xs:string"/>
+      <xs:element name="region" type="Q1:regionesConsultaColonia"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- RESPONSE -->
+  
+  
+  <xs:element name="objetoContratacionConsultaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="contratacionContultaResponse" type="Q1:objetoContratacionContulta"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+   <xs:complexType name="objetoContratacionContulta">
+    <xs:sequence>
+      <xs:element name="folioSC" type="xs:string"/>
+      <xs:element name="tipoConcentracion" type="xs:string"/>
+      <xs:element name="claveOperador" type="xs:string"/>
+      <xs:element name="region" type="Q1:regionesConsultaColonia" maxOccurs="unbounded"/>
+      <xs:element name="err" type="Q1:errores"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="regionesConsultaColonia">
+    <xs:sequence>
+      <xs:element name="pc1" type="Q1:pc1"/>
+      <xs:element name="pc2" type="Q1:pc1"/>
+      <xs:element name="pcai" type="Q1:pcai" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pc1">
+    <xs:sequence>
+      <xs:element name="siglas" type="xs:string"/>
+      <xs:element name="codigoConfirmacion" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+<!-- //////////////////////////////////////////////////////////////////////////OPERACION CONSULTA COLONIA -->
 
 
 

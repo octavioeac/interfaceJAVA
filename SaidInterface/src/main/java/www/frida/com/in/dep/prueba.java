@@ -11,6 +11,8 @@ import www.frida.com.consulta.Errores;
 import www.frida.com.consulta.SolicitudPCAI;
 import www.frida.com.consultaTelefono.ConsulTelRequest;
 
+
+
 public class prueba {
 
 	public prueba() {
@@ -78,6 +80,9 @@ public class prueba {
 if(bandera.size()==tablita.size()){
 	 
 	 System.out.println("HOLA STORE PROCEDURE");
+	 
+	 
+	 
 }
  
 

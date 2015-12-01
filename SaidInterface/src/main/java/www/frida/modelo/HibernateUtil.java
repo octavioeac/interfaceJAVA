@@ -1,5 +1,6 @@
 package www.frida.modelo;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -29,4 +30,16 @@ public class HibernateUtil {
     	getSessionFactory().close();
     }
 
+    public static void closeSession(Session session) {
+        if(session!=null )
+        {
+            if(session.getTransaction().isActive())
+            {
+                session.getTransaction().commit();
+            }
+                session.close();
+                getSessionFactory().close();
+        }
+    }
+    
 }

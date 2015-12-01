@@ -10,7 +10,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name="pcai",propOrder={
 		"folioPcai",
-		"ncai"
+		"ncai",
+		"codigoConfirmacion",
+		"anchoBanda",
+		"estatus"
 		})
 public class Pcai {
 	
@@ -19,6 +22,39 @@ public class Pcai {
 
 	@XmlElement(required=true)
 	protected List<Ncai> ncai;
+
+	@XmlElement
+	protected String codigoConfirmacion;
+
+	@XmlElement
+	protected String anchoBanda;
+	
+	@XmlElement
+	protected String estatus;
+	
+	public String getAnchoBanda() {
+		return anchoBanda;
+	}
+
+	public void setAnchoBanda(String anchoBanda) {
+		this.anchoBanda = anchoBanda;
+	}
+
+	public String getEstatus() {
+		return estatus;
+	}
+
+	public void setEstatus(String estatus) {
+		this.estatus = estatus;
+	}
+
+	public String getCodigoConfirmacion() {
+		return codigoConfirmacion;
+	}
+
+	public void setCodigoConfirmacion(String codigoConfirmacion) {
+		this.codigoConfirmacion = codigoConfirmacion;
+	}
 
 	public String getFolioPcai() {
 		return folioPcai;

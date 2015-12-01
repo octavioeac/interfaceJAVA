@@ -12,7 +12,8 @@ import javax.xml.bind.annotation.XmlType;
 		"ncaiSiglas",
 		"ncaiCentral",
 		"equipoAcceso",
-		"codigoConfirmacion"
+		"codigoConfirmacion",
+		"estatus"
 		
 		})
 public class Ncai {
@@ -31,6 +32,18 @@ public class Ncai {
 	
 	@XmlElement(required=true)
 	protected String equipoAcceso;
+	
+	@XmlElement
+	protected String estatus;
+
+
+	public String getEstatus() {
+		return estatus;
+	}
+
+	public void setEstatus(String estatus) {
+		this.estatus = estatus;
+	}
 
 	public String getFolioNcai() {
 		return folioNcai;

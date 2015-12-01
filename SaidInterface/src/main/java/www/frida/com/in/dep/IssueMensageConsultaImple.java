@@ -8,7 +8,13 @@ import java.util.List;
 import www.frida.com.consulta.Errores;
 import www.frida.com.consulta.SolicitudPCAI;
 import www.frida.com.consulta.DAO.insertaConsultaDAO;
-import www.frida.com.consultaTelefono.ConsulTelRequest;
+
+
+
+
+
+
+
 
 public class IssueMensageConsultaImple implements IssueMessage {
 
@@ -31,14 +37,14 @@ public class IssueMensageConsultaImple implements IssueMessage {
 		
 		if(obj.getTipoContrato().isEmpty()){
 			k.setCodigoError("601");
-			k.setDescripError("El tag <tipoContrato> esta vacio");
+			k.setDescripError("El tag 'tipoContrato' esta vacio");
 			ok=k;
 		
 		}
 		else{
 			if(obj.getMovimiento().isEmpty()){
 				k.setCodigoError("501");
-				k.setDescripError("El tag <movimiento> esta vacio");
+				k.setDescripError("El tag 'movimiento' esta vacio");
 				ok=k;
 			
 			}
@@ -46,7 +52,7 @@ public class IssueMensageConsultaImple implements IssueMessage {
 				if(obj.getMovimiento().equals("CONSULTA")){
 					if(obj.getTipoConcentracion().isEmpty()){
 						k.setCodigoError("501");
-						k.setDescripError("El tag <tipoConcentracion> esta vacio");
+						k.setDescripError("El tag 'tipoConcentracion' esta vacio");
 						ok=k;
 					
 					}
@@ -57,7 +63,7 @@ public class IssueMensageConsultaImple implements IssueMessage {
 							ok=k;
 							if(obj.getFolioSC().isEmpty()){
 								k.setCodigoError("501");
-								k.setDescripError("El tag <tipoConcentracion> esta vacio");
+								k.setDescripError("El tag 'folioSC' esta vacio");
 								ok=k;
 							
 							}
@@ -66,7 +72,7 @@ public class IssueMensageConsultaImple implements IssueMessage {
 								
 								if(obj.getClaveOperador().isEmpty()){
 									k.setCodigoError("901");
-									k.setDescripError("El tag <claveOperador> esta vacio");
+									k.setDescripError("El tag 'claveOperador' esta vacio");
 									ok=k;
 								
 								}
@@ -84,7 +90,7 @@ public class IssueMensageConsultaImple implements IssueMessage {
 									}
 									else{
 										k.setCodigoError("910");
-										k.setDescripError("El tag <claveOperador> acepta 4 caracteres maximo");
+										k.setDescripError("El tag 'claveOperador' acepta 4 caracteres maximo");
 										ok=k;
 									}
 									
@@ -96,7 +102,7 @@ public class IssueMensageConsultaImple implements IssueMessage {
 						}
 						else{
 							k.setCodigoError("101");
-							k.setDescripError("El tag <tipoConcentracion> tiene un dato invalido, se permite 'LOCAL','REGIONAL','NACIONAL'");
+							k.setDescripError("El tag 'tipoConcentracion' tiene un dato invalido, se permite 'LOCAL','REGIONAL','NACIONAL'");
 							ok=k;
 						}
 						
@@ -104,7 +110,7 @@ public class IssueMensageConsultaImple implements IssueMessage {
 				}
 				else{
 					k.setCodigoError("97");
-					k.setDescripError("El tag <movimiento> tiene un dato invalido, se permite 'CONSULTA'");
+					k.setDescripError("El tag 'movimiento' tiene un dato invalido, se permite 'CONSULTA'");
 					ok=k;
 				}
 				
@@ -129,7 +135,7 @@ public class IssueMensageConsultaImple implements IssueMessage {
 		Errores k=new Errores();
 		if(sigla.isEmpty()){
 			k.setCodigoError("401");
-			k.setDescripError("El tag <siglaCentral> esta vacio");
+			k.setDescripError("El tag 'siglaCentral' esta vacio");
 			ok=k;
 		
 		}
@@ -142,7 +148,7 @@ public class IssueMensageConsultaImple implements IssueMessage {
 			}
 			else{
 				k.setCodigoError("405");
-				k.setDescripError("El tag <siglaCentral> con valor '"+sigla+"' acepta 3 caracteres maximo");
+				k.setDescripError("El tag 'siglaCentral' con valor '"+sigla+"' acepta 3 caracteres maximo");
 				ok=k;
 			}
 		
@@ -157,8 +163,9 @@ public class IssueMensageConsultaImple implements IssueMessage {
 		int[] array =new int[lista.size()];
 		int i=0;
 		Errores k=new Errores();
+		
 		for(String h :lista){
-			Errores eo=validaSiglas(h);
+			Errores eo=validaSiglas(h);	
 			   if(eo.getCodigoError().isEmpty()){
 				   System.out.println(obj.getClaveOperador());	          			   
 				   System.out.println(obj.getFolioSC());

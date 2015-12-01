@@ -9,6 +9,7 @@
   <property name="hibernate.connection.username">infinitum</property>
   <property name="hibernate.default_schema">infinitum_unica</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="transaction.auto_close_session">true</property>
   <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
   <!-- Enable Hibernate's automatic session context management -->
   <property name="hibernate.current_session_context_class">thread</property>
