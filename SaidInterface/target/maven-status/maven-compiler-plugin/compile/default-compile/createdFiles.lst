@@ -21,7 +21,9 @@ www\frida\com\consulta\ObjetoSaidRequest.class
 www\frida\com\consulta\Colonia\ConsultaColonia.class
 www\frida\com\consulta\ObjectSc.class
 www\frida\com\consulta\Colonia\Ncai.class
+www\frida\com\consulta\ContratacionColonia\RegionesConsultaColoniapeticion.class
 www\frida\modelo\SaibConsultaRequest.class
+www\frida\com\consulta\ContratacionColonia\PcaiResquest.class
 www\frida\modelo\Snippet.class
 www\frida\com\consulta\Colonia\Pcai.class
 www\frida\com\consulta\Colonia\Puertos1G.class
@@ -40,3 +42,4 @@ www\frida\prueba\pruebaCOntraCOnsultCOlonia.class
 www\frida\com\consulta\ContratacionColonia\ObjetoContratacionConsultaRequest.class
 www\frida\com\consulta\ObjetoSaidResponse.class
 www\frida\com\consulta\Colonia\Region.class
+www\frida\com\consulta\ContratacionColonia\NcaiRequest.class

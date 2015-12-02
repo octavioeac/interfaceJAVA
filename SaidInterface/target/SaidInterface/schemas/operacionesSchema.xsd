@@ -182,16 +182,15 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
   
   
   <!-- REQUEST -->
+    
   
-  
-  <xs:element name="objetoContratacionConsultaRequest">
+    <xs:element name="objetoContratacionConsultaRequest">
     <xs:complexType>
       <xs:sequence>
         <xs:element name="peticionContratacionConsulta" type="Q1:peticionContratacionConsulta"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  
   
     <xs:complexType name="peticionContratacionConsulta">
     <xs:sequence>
@@ -201,10 +200,44 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="folioSC" type="xs:string"/>
       <xs:element name="claveOperador" type="xs:string"/>
       <xs:element name="nis" type="xs:string"/>
-      <xs:element name="region" type="Q1:regionesConsultaColonia"/>
+      <xs:element name="region" type="Q1:regionesConsultaColoniaRequest"/>
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="regionesConsultaColoniaRequest">
+    <xs:sequence>
+      <xs:element name="pc1" type="Q1:pc1"/>
+      <xs:element name="pc2" type="Q1:pc1"/>
+      <xs:element name="pcai" type="Q1:pcaiResquest" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pc1">
+    <xs:sequence>
+      <xs:element name="siglas" type="xs:string"/>
+      <xs:element name="codigoConfirmacion" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pcaiResquest">
+    <xs:sequence>
+      <xs:element name="folio" type="xs:string"/>
+      <xs:element name="estatus" type="xs:string"/>
+      <xs:element name="ncai" type="Q1:ncaiRequest"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ncaiRequest">
+    <xs:sequence>
+      <xs:element name="folio" type="xs:string"/>
+      <xs:element name="estatus" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  
+    
+  
+  
   <!-- RESPONSE -->
   
   
@@ -234,12 +267,6 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="pc1">
-    <xs:sequence>
-      <xs:element name="siglas" type="xs:string"/>
-      <xs:element name="codigoConfirmacion" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
 
 
 <!-- //////////////////////////////////////////////////////////////////////////OPERACION CONSULTA COLONIA -->
