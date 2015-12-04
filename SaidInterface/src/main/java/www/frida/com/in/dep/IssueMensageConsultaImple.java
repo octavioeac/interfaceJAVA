@@ -215,12 +215,9 @@ public class IssueMensageConsultaImple implements IssueMessage {
 	}
         	
 	public void regresaError(Errores isu){
-		System.out.println(obj.getClaveOperador());
-		System.out.println("HOLA METODO");
+		
+		
 		List<String> lista =new ArrayList<String>();
-		System.out.println(isu.getCodigoError());
-		System.out.println(isu.getDescripError());
-		System.out.println(obj.getSiglaCentral().size());
 		insertaConsultaDAO daoObjeto= new insertaConsultaDAO();		
 			Errores k=new Errores();
 		for(String h :obj.getSiglaCentral()){

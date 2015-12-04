@@ -21,6 +21,8 @@ import www.frida.com.consulta.Colonia.ObjetoSaidConsultaContratacionColoniaReque
 import www.frida.com.consulta.Colonia.ObjetoSaidConsultaContratacionColoniaResponse;
 import www.frida.com.consulta.ContratacionColonia.ObjetoContratacionConsultaRequest;
 import www.frida.com.consulta.ContratacionColonia.ObjetoContratacionConsultaResponse;
+import www.frida.com.consulta.DAO.criterConsultaDAO;
+import www.frida.com.consulta.DAO.storeProcedureConsulta;
 import www.frida.com.consultaTelefono.ConsulTelRequest;
 import www.frida.com.in.dep.IssueMensageConsultaImple;
 import www.frida.com.in.dep.objectFactoryDependecy;
@@ -39,10 +41,10 @@ public class endpoitSaidService {
 	@ResponsePayload
 	public ObjetoSaidResponse getConsultaSaid(@RequestPayload  ObjetoSaidRequest request){
 		ObjetoSaidResponse reponse=new ObjetoSaidResponse();;
-		System.out.println("HOLA METODO JULIO");
+		
 		
 		SolicitudPCAI objeto=request.getPcai();
-		
+        		
 		ObjectSc  respuestaObjeto=new ObjectSc();
 		
 		
@@ -73,7 +75,7 @@ public class endpoitSaidService {
 		 while(keySetIterator.hasNext()){
 	  	 Boolean key = keySetIterator.next();
 	  	   
-	    System.out.println("key: " + key + " value: " + tablita.get(key));
+	  //  System.out.println("key: " + key + " value: " + tablita.get(key));
 	    if(key==false){
 	    j=tablita.get(key);
 	    respuestaObjeto.setErr(j);
@@ -87,15 +89,35 @@ public class endpoitSaidService {
 	    
 	    }
 
-	 System.out.println(j.getDescripError());
+	// System.out.println(j.getDescripError());
 
 	if(bandera.size()==tablita.size()){
+           		
+		/*pruebaMetodo1 metodoReponse=new pruebaMetodo1();
+		 reponse.setObjSc(metodoReponse.getObje(request));*/
+		 System.out.println("HOLA STORE PROCEDURE");
 		
-		pruebaMetodo1 metodoReponse=new pruebaMetodo1();
-		 reponse.setObjSc(metodoReponse.getObje(request));
-		 System.out.println("HOLA STORE PROCEDURE");
-		 System.out.println("HOLA STORE PROCEDURE");
-		 
+		 storeProcedureConsulta storeObjec=new storeProcedureConsulta();
+		 List<String> eje=objeto.getSiglaCentral();
+		 for(String exebucle:eje){
+			 /*System.out.println(exebucle);
+			 System.out.println(objeto.getTipoConcentracion());
+			 System.out.println( objeto.getTipoContrato());
+			 System.out.println( objeto.getMovimiento());
+			 System.out.println(objeto.getFolioSC());
+			 System.out.println( objeto.getClaveOperador());*/
+			 
+			 storeObjec.ejecutaStoreConsulta(exebucle, 
+					 objeto.getTipoConcentracion(),
+					 objeto.getTipoContrato(),
+					 objeto.getMovimiento(),
+					 objeto.getFolioSC(),
+					 objeto.getClaveOperador(),
+					 objeto.getSiglaCentral().size());
+			 System.out.println(exebucle);
+		 }
+		 criterConsultaDAO ejecuc=new criterConsultaDAO();
+		 reponse.setObjSc(ejecuc.getObjectSc(objeto));
 		 
 	}
 	 

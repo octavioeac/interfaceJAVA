@@ -6,6 +6,7 @@ C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consu
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\ContratacionColonia\ObjetoContratacionConsultaResponse.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\ContratacionColonia\ObjetoContratacionContulta.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\ContratacionColonia\NcaiRequest.java
+C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\modelo\SaibConsultaResponse.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\in\dep\objectFactoryDependecy.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\modelo\HibernateUtil.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\prueba\pruebaMetodo1.java
@@ -26,6 +27,7 @@ C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consu
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\prueba\pruebaContratacionConsulta.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Regiones.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\DAO\insertaConsultaDAO.java
+C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\DAO\criterConsultaDAO.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\Colonia\ObjetoSaidConsultaContratacionColoniaResponse.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\DAO\storeProcedureConsulta.java
 C:\Users\PROIT\git\interfaceJAVA\SaidInterface\src\main\java\www\frida\com\consulta\ContratacionColonia\PcaiResquest.java
