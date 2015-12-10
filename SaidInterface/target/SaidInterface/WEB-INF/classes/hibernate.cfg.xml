@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
- <session-factory name="fridaSession">
+ <session-factory >
   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
   <property name="hibernate.connection.password">infinitum2008</property>
   <property name="hibernate.connection.url">jdbc:mysql://10.94.143.194:3306/infinitum_unica</property>
@@ -14,8 +15,8 @@
   <!-- Enable Hibernate's automatic session context management -->
   <property name="hibernate.current_session_context_class">thread</property>
   <property name="show_sql">true</property>
-  <mapping class="www.frida.modelo.SaibConsultaRequest" resource="www/frida/modelo/SaibConsultaRequest.hbm.xml"/>
-    <mapping class="www.frida.modelo.StoreProcedureSAIB" resource="www/frida/modelo/StoreProcedureSAIB.hbm.xml"/>
-        <mapping class="www.frida.modelo.SaibConsultaResponse" resource="www/frida/modelo/SaibConsultaResponse.hbm.xml"/>
+  <mapping resource="www/frida/modelo/SaibConsultaRequest.hbm.xml"/>
+    <mapping resource="www/frida/modelo/StoreProcedureSAIB.hbm.xml"/>
+        <mapping resource="www/frida/modelo/SaibConsultaResponse.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>
