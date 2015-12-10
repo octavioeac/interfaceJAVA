@@ -26,13 +26,15 @@ public class storeProcedureConsulta {
 			int pos
 			
 			){
+		System.out.println("HOLA METODO ejecutaStoreConsulta()");
+		Session session = null;
+    	Transaction tx = null;
+		try{
 		
-		
-		Session session=HibernateUtil.getSessionFactory().openSession();
-		Transaction tx =session.getTransaction();
+		 session=HibernateUtil.getSessionFactory().openSession();
+		 tx =session.getTransaction();
+		 tx.setTimeout(5);
 		session.beginTransaction();
-		System.out.println(siglasABuscar);
-		System.out.println(folioSC);
 		
 		Query query = session.createSQLQuery("CALL saib_consulta1(:siglas_a_buscar,:tipoConcentracion,:tipoContrato,:movimiento,:folioSC,:claveOperador,:num)")
 				.addEntity(StoreProcedureSAIB.class)
@@ -48,9 +50,21 @@ public class storeProcedureConsulta {
 		System.out.println(query.getQueryString());
 	 query.executeUpdate();
 	 tx.commit();
-			
+		}catch(RuntimeException e){
+    		try{
+    			tx.rollback();
+    		}catch(RuntimeException rbe){
+    			System.out.println("Couldn’t roll back transaction");
+    		}
+    		throw e;
+    	}finally{
+    		if(session!=null){
+    			
+    HibernateUtil.close();
+    		}
+    	}	
 	
-			HibernateUtil.close();
+			//HibernateUtil.close();
 			
 			System.out.println("CERRANDO STORE PROCEDURE");
 
@@ -66,17 +80,17 @@ public class storeProcedureConsulta {
 
 	}
 
-	
-	public static void main(String args[]){
+
+	/*public static void main(String args[]){
 		storeProcedureConsulta obje=new storeProcedureConsulta();
 		List<String> lista=new ArrayList<String>();
 		lista.add("BOR");
 		lista.add("MIR");
 		
 		for(String h:lista){
-		obje.ejecutaStoreConsulta(h, "LOCAL", "COLONIA", "CONSULTA", "198765", "12", 2);
+		obje.ejecutaStoreConsulta(h, "LOCAL", "COLONIA", "CONSULTA", "18789065", "12", 2);
 		}
-	}
+	}*/
 
 	
 	

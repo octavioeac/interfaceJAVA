@@ -21,6 +21,7 @@ www\frida\com\consultaTelefono\ConsulTelRequest.class
 www\frida\com\consulta\Colonia\Region.class
 www\frida\com\consulta\ObjetoSaidResponse.class
 www\frida\com\consulta\ContratacionColonia\ObjetoContratacionContulta.class
+www\frida\com\consulta\DAO\criterExistefolioDAO.class
 www\frida\modelo\StoreProcedureSAIB.class
 www\frida\com\consulta\DAO\criterConsultaDAO.class
 www\frida\prueba\pruebaInsert.class

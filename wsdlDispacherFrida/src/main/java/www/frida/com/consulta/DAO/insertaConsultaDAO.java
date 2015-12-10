@@ -51,6 +51,7 @@ public class insertaConsultaDAO {
 try{
 			newSession.close();
 			HibernateUtil.close();
+			System.out.println("CERRANDO INSERTA DAO");
 }
 catch(HibernateException e){
 	

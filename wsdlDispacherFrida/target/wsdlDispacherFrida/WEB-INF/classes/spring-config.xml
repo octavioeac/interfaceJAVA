@@ -14,7 +14,7 @@
        <!--  
             Our test service bean  
        -->  
-       <bean id="SaidServicio" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition" lazy-init="true">  
+       <bean id="SaibServicio" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition" lazy-init="true">  
       <property name="schemaCollection">  
         <bean class="org.springframework.xml.xsd.commons.CommonsXsdSchemaCollection">  
           <property name="inline" value="true" />  
@@ -25,8 +25,8 @@
           </property>  
         </bean>  
       </property>  
-     <property name="portTypeName" value="SaidServicio"/>  
-      <property name="serviceName" value="SaidServicio" />  
+     <property name="portTypeName" value="SaibServicio"/>  
+      <property name="serviceName" value="SaibServicio" />  
       <property name="locationUri" value="/endpoints"/>  
     </bean>  
     

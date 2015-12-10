@@ -93,19 +93,12 @@ public class endpoitSaidService {
 
 	if(bandera.size()==tablita.size()){
            		
-		/*pruebaMetodo1 metodoReponse=new pruebaMetodo1();
-		 reponse.setObjSc(metodoReponse.getObje(request));*/
 		 System.out.println("HOLA STORE PROCEDURE");
 		
 		 storeProcedureConsulta storeObjec=new storeProcedureConsulta();
 		 List<String> eje=objeto.getSiglaCentral();
 		 for(String exebucle:eje){
-			 /*System.out.println(exebucle);
-			 System.out.println(objeto.getTipoConcentracion());
-			 System.out.println( objeto.getTipoContrato());
-			 System.out.println( objeto.getMovimiento());
-			 System.out.println(objeto.getFolioSC());
-			 System.out.println( objeto.getClaveOperador());*/
+			 
 			 
 			 storeObjec.ejecutaStoreConsulta(exebucle, 
 					 objeto.getTipoConcentracion(),

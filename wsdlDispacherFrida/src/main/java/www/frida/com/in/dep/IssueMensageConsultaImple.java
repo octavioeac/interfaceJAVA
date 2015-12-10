@@ -177,13 +177,6 @@ public class IssueMensageConsultaImple implements IssueMessage {
 		for(String h :lista){
 			Errores eo=validaSiglas(h);	
 			   if(eo.getCodigoError().isEmpty()){
-				   System.out.println(obj.getClaveOperador());	          			   
-				   System.out.println(obj.getFolioSC());
-				   System.out.println(obj.getMovimiento());
-				   System.out.println(obj.getTipoConcentracion());
-				   System.out.println(obj.getTipoContrato());
-				   System.out.println(eo.getDescripError());
-				   System.out.println(h);
 				   System.out.println("SIGLA BUENA");
 				   daoObjeto.insertaConsulta(
 						   obj.getTipoContrato(), 
@@ -197,13 +190,7 @@ public class IssueMensageConsultaImple implements IssueMessage {
 				   			   }
 			   else{
 				   
-				   System.out.println(obj.getClaveOperador());	          			   
-				   System.out.println(obj.getFolioSC());
-				   System.out.println(obj.getMovimiento());
-				   System.out.println(obj.getTipoConcentracion());
-				   System.out.println(obj.getTipoContrato());
-			      System.out.println(h);
-				   System.out.println(eo.getDescripError());
+				  
 				   System.out.println("SIGLA MALA");
 				   daoObjeto.insertaConsulta(
 						   obj.getTipoContrato(), 
@@ -232,14 +219,7 @@ public class IssueMensageConsultaImple implements IssueMessage {
 			Errores k=new Errores();
 		for(String h :obj.getSiglaCentral()){
 			Errores eo=validaSiglas(h);
-			   			   System.out.println(obj.getClaveOperador());	          			   
-				   System.out.println(obj.getFolioSC());
-				   System.out.println(obj.getMovimiento());
-				   System.out.println(obj.getTipoConcentracion());
-				   System.out.println(obj.getTipoContrato());
-			      System.out.println(h);
-				   System.out.println(eo.getDescripError());
-				   System.out.println("SIGLA MALA");
+			   			 
 				   daoObjeto.insertaConsulta(
 						   obj.getTipoContrato(), 
 						   obj.getTipoConcentracion(),

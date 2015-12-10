@@ -78,7 +78,7 @@ public class criterConsultaDAO {
 	}
 	newSession.getTransaction().commit();
 	try{
-	newSession.close();
+	//newSession.close();
 	HibernateUtil.close();
 	System.out.println("Cerrando CENTRALES");
 		}
@@ -137,7 +137,7 @@ public class criterConsultaDAO {
 	 
 		
 			
-			newSession.close();
+//			newSession.close();
 			HibernateUtil.close();			
 			System.out.println("Cerrando Regiones 1");
 	return reponse;
@@ -166,7 +166,7 @@ public class criterConsultaDAO {
 	
    
    
-   /*public static void main(String args[]){
+ public static void main(String args[]){
 	   
 	   
 	   try{
@@ -185,11 +185,11 @@ public class criterConsultaDAO {
 catch(Exception e){
 	System.out.println(e.getCause());
 	
-}*/
+}
 	
 	
 	
-  
+ }
    
 }
 
